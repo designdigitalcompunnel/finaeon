@@ -1,22 +1,21 @@
-# Finaeon website (homepage + Quantitative Analysts page)
+# Finaeon website: homepage and Quantitative Analysts page
 
 ## Files
-- index.html: homepage (hero, stats, customers, platform accordion, mission, solutions, CTA, footer)
-- quantitative-analysts.html: persona page with breadcrumbs, sample layout, series, methodology form, workflow, demo CTA
+- index.html: the homepage.
+- quantitative-analysts.html: the Quantitative Analysts persona page.
+- media/hero.mp4: homepage hero video (Pexels video 8348731).
+- media/hero-poster.jpg: poster image shown while the hero video loads.
+- media/cta-bg.jpg: background image for the Get started sections.
 
-## Links between the pages
-- Homepage -> Quantitative analysts: "Quantitative analysts" card in the Solutions section.
-- Quantitative analysts -> Homepage: breadcrumbs (Home, Solutions), header and footer links.
-- Both pages use the same header, footer, fonts and theme switcher.
+## How the pages link together
+- The header's Solutions link on both pages opens quantitative-analysts.html.
+- The breadcrumbs and header links on the Quantitative Analysts page open the homepage.
+- Keep the two HTML files and the media folder together, with the same folder structure, when you upload them.
 
-## Put it online
-Upload both files to the same folder on any web host (or open index.html locally).
-Keep the two file names exactly as they are, because the links use them.
-
-## Items to confirm before launch
-- Video: the hero uses a Pexels MP4 link. Replace it with your own footage if you prefer to host it.
-- Forms (demo, newsletter, methodology download): connect to HubSpot or your form endpoint.
+## Before launch
 - Address and phone number: not yet added to the footer.
 - Social media links (LinkedIn, X, YouTube, Facebook): placeholders to verify.
-- Structured data on the Quantitative analysts page uses https://www.finaeon.com/quantitative-analysts as its canonical URL. Change it to your real domain.
+- Forms (demo, newsletter, methodology download): connect to HubSpot or your form endpoint.
+- Structured data on the Quantitative Analysts page uses https://www.finaeon.com/quantitative-analysts. Change it to your real domain.
 - The sample table and citation text are illustrative, not real data.
+- Confirm the Adobe Stock licence for media/cta-bg.jpg covers web use.

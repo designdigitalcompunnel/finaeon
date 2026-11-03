@@ -626,6 +626,86 @@ section{position:relative;padding:120px 0;background:var(--bg);color:var(--text)
 .sc p{margin:0;color:var(--muted);font-size:16px;line-height:1.6}
 @media (max-width:1000px){.sgrid{grid-template-columns:1fr 1fr}}
 @media (max-width:620px){.sgrid{grid-template-columns:1fr}}
+
+/* ===== Full-width header with logo on the left ===== */
+.site-header{top:0!important;left:0;right:0;padding:0!important}
+.hbar{display:flex!important;align-items:center;max-width:none!important;width:100%;border-radius:0!important;border:0!important;border-bottom:1px solid #1F2A28!important;padding-top:16px!important;padding-bottom:16px!important;padding-left:max(24px,calc(50% - 600px))!important;padding-right:max(24px,calc(50% - 600px))!important;background:#000000!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;gap:0!important}
+.site-header.scrolled .hbar{padding-top:12px!important;padding-bottom:12px!important}
+.brand{order:0;justify-self:auto!important;margin-right:56px}
+.nav-l{order:1}
+.hact{order:2;margin-left:auto!important;justify-self:auto!important}
+.search{top:100%!important;left:0!important;right:0!important;max-width:none!important;border-radius:0!important}
+
+
+
+/* ===== Square corners on every page ===== */
+*,*::before,*::after{border-radius:0!important}
+
+/* ===== Square corners on every element (no curves) ===== */
+*,*::before,*::after{border-radius:0!important}
+
+/* ===== What you need from the data: gradient background, brand element top left, solid black cards ===== */
+.need-sec{position:relative;overflow:hidden;isolation:isolate;background:#04201D!important}
+.need-sec::before{content:"";position:absolute;inset:-20%;z-index:-1;pointer-events:none;background:radial-gradient(ellipse 45% 55% at 12% 20%,rgba(4,170,154,.42),rgba(4,170,154,0) 70%),radial-gradient(ellipse 40% 50% at 85% 75%,rgba(40,120,165,.38),rgba(40,120,165,0) 70%),radial-gradient(ellipse 35% 45% at 60% 15%,rgba(127,235,214,.22),rgba(127,235,214,0) 70%),linear-gradient(135deg,#04201D,#0B3A35);background-size:150% 150%,150% 150%,150% 150%,100% 100%;animation:custFlow 22s ease-in-out infinite alternate}
+.need-mark{position:absolute;left:-4%;top:-10%;width:min(520px,46vw);opacity:.08;pointer-events:none;z-index:0}
+.need-mark svg{width:100%;height:auto;display:block}
+.need-sec .wrap{position:relative;z-index:1}
+.need-sec .card{background:#000000!important;background-image:none!important;border:1px solid #1E2A28!important;box-shadow:none!important}
+@media (prefers-reduced-motion:reduce){.need-sec::before{animation:none}}
+
+/* ===== Sample layout: pale blue-grey heading rows ===== */
+.dpanel .ph,.dtable th,.prow.head{background:#DCE7EE!important;color:#0B1720!important}
+/* ===== Series categories: gradient background, solid black cards, animated icons ===== */
+.series-sec{position:relative;overflow:hidden;isolation:isolate;background:#04201D!important}
+.series-sec::before{content:"";position:absolute;inset:-20%;z-index:-1;pointer-events:none;background:radial-gradient(ellipse 45% 55% at 85% 15%,rgba(4,170,154,.4),rgba(4,170,154,0) 70%),radial-gradient(ellipse 40% 50% at 12% 85%,rgba(40,120,165,.36),rgba(40,120,165,0) 70%),radial-gradient(ellipse 35% 45% at 50% 50%,rgba(127,235,214,.2),rgba(127,235,214,0) 70%),linear-gradient(135deg,#04201D,#0B3A35);background-size:150% 150%,150% 150%,150% 150%,100% 100%;animation:custFlow 24s ease-in-out infinite alternate}
+.series-sec .wrap{position:relative;z-index:1}
+.series-sec .res{background:#000000!important;border:1px solid #1E2A28!important;border-left:3px solid #7FEBD6!important;color:#F1F7F5}
+.series-sec .res b{color:#F1F7F5}
+.series-sec .res small{color:#B5CBC6}
+.res-ico{display:grid;place-items:center;width:52px;height:52px;border:1.5px solid #7FEBD6;color:#7FEBD6;margin-bottom:14px}
+.res-svg{width:28px;height:28px;overflow:visible;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ico-trend path:first-child{stroke-dasharray:1;stroke-dashoffset:1;animation:icoTrend 3.6s ease-in-out infinite}
+@keyframes icoTrend{0%{stroke-dashoffset:1}60%,100%{stroke-dashoffset:0}}
+.ico-bank path:nth-child(2){transform-box:fill-box;transform-origin:50% 100%;animation:icoPulse 2.4s ease-in-out infinite}
+@keyframes icoPulse{0%,100%{transform:scaleY(1)}50%{transform:scaleY(.6)}}
+.ico-cube{animation:icoSpin 9s linear infinite}
+@keyframes icoSpin{to{transform:rotateY(360deg)}}
+.ico-exch{animation:icoSlide 3s ease-in-out infinite}
+@keyframes icoSlide{0%,100%{transform:translateX(-2px)}50%{transform:translateX(2px)}}
+.ico-wave path{stroke-dasharray:60;animation:icoFlow 3s linear infinite}
+@keyframes icoFlow{to{stroke-dashoffset:-120}}
+.ico-bars rect{transform-box:fill-box;transform-origin:50% 100%;animation:icoBar 2.2s ease-in-out infinite}
+.ico-bars rect:nth-child(2){animation-delay:.3s}.ico-bars rect:nth-child(3){animation-delay:.6s}
+@keyframes icoBar{0%,100%{transform:scaleY(.5)}50%{transform:scaleY(1)}}
+@media (prefers-reduced-motion:reduce){.series-sec::before,.res-svg,.res-svg *{animation:none!important}}
+
+/* ===== Gated download: outlined documents and pen icon, animated ===== */
+.gate-ico{width:min(150px,30vw);margin:0 0 22px}
+.gate-ico svg{width:100%;height:auto;display:block;overflow:visible;fill:none;stroke:#00554C;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
+.gate-ico .gate-pen path{stroke:#00554C;stroke-width:12}
+.gate-back{transform-box:fill-box;transform-origin:50% 50%;animation:gateRock 6s ease-in-out infinite}
+@keyframes gateRock{0%,100%{transform:rotate(-1.5deg)}50%{transform:rotate(1.5deg)}}
+.gate-front{transform-box:fill-box;transform-origin:50% 100%;animation:gateLift 6s ease-in-out infinite}
+@keyframes gateLift{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+.gate-ico .gate-line{stroke-dasharray:1;stroke-dashoffset:1;animation:gateWrite 4.8s ease-in-out infinite}
+.gate-ico .l2{animation-delay:.6s}
+.gate-ico .l3{animation-delay:1.2s}
+@keyframes gateWrite{0%{stroke-dashoffset:1}30%,70%{stroke-dashoffset:0}100%{stroke-dashoffset:-1}}
+.gate-pen{transform-box:fill-box;transform-origin:50% 50%;animation:gatePen 4.8s ease-in-out infinite}
+@keyframes gatePen{0%,100%{transform:translate(0,0)}50%{transform:translate(12px,10px)}}
+@media (prefers-reduced-motion:reduce){.gate-back,.gate-front,.gate-pen,.gate-ico .gate-line{animation:none!important;stroke-dashoffset:0!important}}
+
+/* ===== Sample layout: Field / Type / Example and Target / Status rows in the attached pale mint ===== */
+.dtable th,.prow.head{background:#EEF2EC!important}
+
+/* ===== Gated download icon: clean layered sheets and pen ===== */
+.gate-ico svg{stroke-width:6}
+.gate-ico .gate-pen path{stroke:#00554C;stroke-width:12}
+.gate-ico .gate-pen path:last-child{stroke-width:8}
+.gate-ico .gate-line{stroke:#00554C;stroke-width:6;stroke-linecap:round}
+.gate-ico .gate-back rect,.gate-ico .gate-front path:first-child,.gate-ico .gate-front path:nth-child(2){stroke:#00554C;stroke-width:6;stroke-linejoin:round}
+.gate-ico .gate-back{animation:gateRock 7s ease-in-out infinite}
+.gate-ico .gate-pen{animation:gatePen 4.8s ease-in-out infinite}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
@@ -677,10 +757,8 @@ section{position:relative;padding:120px 0;background:var(--bg);color:var(--text)
 <!-- ============ HERO with breadcrumbs ============ -->
 <section class="hero quant-hero T-dark" data-tone="dark" aria-labelledby="qaTitle">
   <div class="hero-bg" aria-hidden="true">
-    <!-- Free Pexels footage: "Analyzing Financial Data on Multiscreen Setup" by Rafael Minguet Delgado.
-         Source: https://www.pexels.com/video/analyzing-financial-data-on-multiscreen-setup-38656963/ -->
     <video class="hero-video" autoplay muted loop playsinline preload="metadata">
-      <source src="https://www.pexels.com/download/video/38642316/" type="video/mp4">
+      <source src="https://videos.pexels.com/video-files/29167798/12595752_3840_2160_30fps.mp4" type="video/mp4">
     </video>
   </div>
   <div class="wrap grid">
@@ -694,7 +772,7 @@ section{position:relative;padding:120px 0;background:var(--bg);color:var(--text)
       </nav>
       <span class="label reveal" style="color:#A4F5E4">For quantitative analysts and model architects</span>
       <h1 id="qaTitle" class="reveal">Model-ready history for <span class="fade">quantitative</span> research.</h1>
-      <p class="hero-sub reveal d1">Explore historical financial datasets reaching back to 1601, structured to support quantitative research workflows in Python, R and AI-assisted analysis.</p>
+      <p class="hero-sub reveal d1">Model-ready historical data for Python, R and AI pipelines, from 1601.</p>
       <form class="pill-form reveal d2" id="qaHero" aria-label="Book a demo">
         <label class="sr-only" for="heroEmail">Work email address</label>
         <input id="heroEmail" type="email" placeholder="Enter your work email address" autocomplete="email" required>
@@ -717,7 +795,8 @@ section{position:relative;padding:120px 0;background:var(--bg);color:var(--text)
 </section>
 
 <!-- ============ WHAT QUANT TEAMS NEED (dark) ============ -->
-<section class="customers T-dark" data-tone="dark" aria-labelledby="needTitle">
+<section class="customers T-dark need-sec" data-tone="dark" aria-labelledby="needTitle">
+  <div class="need-mark" aria-hidden="true"><svg viewBox="0 0 620 474" xmlns="http://www.w3.org/2000/svg"><path d="M0 0H194C251.438 0 298 46.5624 298 104V225H104C46.5624 225 0 178.438 0 121V0Z" fill="#42BCAE"/><path d="M620 0H426C368.562 0 322 46.5624 322 104V225H516C573.438 225 620 178.438 620 121V0Z" fill="#42BCAE"/><path d="M0 474H194C251.438 474 298 427.438 298 370V249H104C46.5624 249 0 295.562 0 353V474Z" fill="#42BCAE"/><path d="M620 474H426C368.562 474 322 427.438 322 370V249H516C573.438 249 620 295.562 620 353V474Z" fill="#42BCAE"/></svg></div>
   <div class="wrap grid">
     <div class="c-1-8">
       <span class="label reveal">What you need from the data</span>
@@ -725,17 +804,17 @@ section{position:relative;padding:120px 0;background:var(--bg);color:var(--text)
     </div>
     <div class="c-1-4 reveal"><article class="card">
       <h3>Structured datasets</h3>
-      <p>Structured tables and consistent field definitions help reduce preparation work before analysis and feature engineering.</p>
+      <p>Tidy, model-ready tables with consistent schemas, so features build without manual cleaning.</p>
       <span class="q">Built for immediate ingestion</span>
     </article></div>
     <div class="c-5-8 reveal d1"><article class="card">
       <h3>Stable identifiers</h3>
-      <p>Clear series references help analysts identify and compare datasets across research workflows and back-tests.</p>
+      <p>Each series keeps the same identifier across the archive, so joins and back-tests stay reliable.</p>
       <span class="q">Consistent across the archive</span>
     </article></div>
     <div class="c-9-12 reveal d2"><article class="card">
       <h3>Permanent links</h3>
-      <p>Permanent resource links help teams reference shared documentation and research materials consistently.</p>
+      <p>Every downloadable series has a permanent link, so pipelines and papers point to the same source.</p>
       <span class="q">Reproducible by design</span>
     </article></div>
   </div>
@@ -748,7 +827,7 @@ section{position:relative;padding:120px 0;background:var(--bg);color:var(--text)
       <div class="c-1-12">
         <span class="label reveal">Sample layout</span>
         <h2 id="layoutTitle" class="reveal">One series, in the shape your pipeline expects.</h2>
-        <p class="lead reveal d1">The table below is an illustrative data layout, showing how observations, fields and series references could be organised. Confirm available fields and export formats against the relevant Finaeon data sheet.</p>
+        <p class="lead reveal d1">Each series arrives as a flat table: one row per observation, typed columns and a stable identifier. The layout below is illustrative.</p>
       </div>
     </div>
     <div class="grid dpair" style="margin-top:52px">
@@ -775,20 +854,20 @@ section{position:relative;padding:120px 0;background:var(--bg);color:var(--text)
 </section>
 
 <!-- ============ SERIES CATEGORIES (dark) ============ -->
-<section class="customers T-dark" id="series" data-tone="dark" aria-labelledby="seriesTitle">
+<section class="customers T-dark series-sec" id="series" data-tone="dark" aria-labelledby="seriesTitle">
   <div class="wrap grid">
     <div class="c-1-8">
       <span class="label reveal">Series categories</span>
       <h2 id="seriesTitle" class="reveal">The asset classes your models use.</h2>
-      <p class="lead reveal d1">Coverage dates and observation frequency vary by series. Review the relevant data sheet for series-level details.</p>
+      <p class="lead reveal d1">Coverage start date and frequency differ by series. Each data sheet lists them exactly.</p>
     </div>
     <div class="c-1-12 res-grid reveal">
-      <div class="res"><span class="tag">Category</span><b>Global equities</b><small>Market index and price history</small></div>
-      <div class="res"><span class="tag">Category</span><b>Sovereign yields</b><small>Government bond yield series</small></div>
-      <div class="res"><span class="tag">Category</span><b>Commodity prices</b><small>Long-wave commodity cycles</small></div>
-      <div class="res"><span class="tag">Category</span><b>Exchange rates</b><small>Currency series for cross-market work</small></div>
-      <div class="res"><span class="tag">Category</span><b>Macro series</b><small>Economic indicators for regime analysis</small></div>
-      <div class="res"><span class="tag">Category</span><b>Market indices</b><small>Benchmark indices for back-testing</small></div>
+      <div class="res"><span class="res-ico" aria-hidden="true"><svg viewBox="0 0 24 24" class="res-svg ico-trend"><path d="M3 17l5-5 4 4 8-8"/><path d="M15 8h6v6"/></svg></span><b>Global equities</b><small>Market index and price history</small></div>
+      <div class="res"><span class="res-ico" aria-hidden="true"><svg viewBox="0 0 24 24" class="res-svg ico-bank"><path d="M3 10l9-6 9 6"/><path d="M5 10v9M9 10v9M15 10v9M19 10v9"/><path d="M3 21h18"/></svg></span><b>Sovereign yields</b><small>Government bond yield series</small></div>
+      <div class="res"><span class="res-ico" aria-hidden="true"><svg viewBox="0 0 24 24" class="res-svg ico-cube"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg></span><b>Commodity prices</b><small>Long-wave commodity cycles</small></div>
+      <div class="res"><span class="res-ico" aria-hidden="true"><svg viewBox="0 0 24 24" class="res-svg ico-exch"><path d="M4 8h14l-3-3M20 16H6l3 3"/></svg></span><b>Exchange rates</b><small>Currency series for cross-market work</small></div>
+      <div class="res"><span class="res-ico" aria-hidden="true"><svg viewBox="0 0 24 24" class="res-svg ico-wave"><path d="M2 12c2.5-4 5-4 7.5 0s5 4 7.5 0 3-2.7 5-0"/></svg></span><b>Macro series</b><small>Economic indicators for regime analysis</small></div>
+      <div class="res"><span class="res-ico" aria-hidden="true"><svg viewBox="0 0 24 24" class="res-svg ico-bars"><rect x="4" y="12" width="4" height="8" rx="1"/><rect x="10" y="7" width="4" height="13" rx="1"/><rect x="16" y="10" width="4" height="10" rx="1"/></svg></span><b>Market indices</b><small>Benchmark indices for back-testing</small></div>
     </div>
   </div>
 </section>
@@ -797,9 +876,10 @@ section{position:relative;padding:120px 0;background:var(--bg);color:var(--text)
 <section class="allin T-sand" id="methodology" data-tone="sand" aria-labelledby="methTitle">
   <div class="wrap grid">
     <div class="c-1-6">
-      <span class="label reveal">Gated download</span>
-      <h2 id="methTitle" class="reveal">Document the method behind your model inputs.</h2>
-      <p class="lead reveal d1">The methodology resource explains how historical series are linked across eras, how breaks and changes in source coverage are treated, and what researchers should consider when documenting or citing a dataset. Request access with your work email.</p>
+      <div class="gate-ico reveal" aria-hidden="true"><svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg"><g class="gate-back"><rect x="112" y="30" width="96" height="132" rx="4" transform="rotate(14 160 96)" fill="#ECEBDF"/><rect x="140" y="92" width="80" height="120" rx="4" transform="rotate(14 160 96)" fill="#ECEBDF"/></g><g class="gate-front"><path d="M40 70 H150 V170 L124 214 H40 Z" fill="#ECEBDF"/><path d="M124 214 V188 Q124 180 132 180 H150"/><path class="gate-line l1" pathLength="1" d="M62 108 H128"/><path class="gate-line l2" pathLength="1" d="M62 130 H128"/><path class="gate-line l3" pathLength="1" d="M62 152 H108"/></g><g class="gate-pen"><path d="M30 34 L108 150" stroke-width="12"/><path d="M108 150 L116 164" stroke-width="8"/></g></svg></div>
+    <span class="label reveal">Gated download</span>
+      <h2 id="methTitle" class="reveal">Methodology note for model documentation.</h2>
+      <p class="lead reveal d1">Explains how series are chain-linked across eras, how breaks are handled and what to disclose when you cite the data. Share your work email to receive it.</p>
     </div>
     <div class="c-7-12 reveal d1">
       <form class="form-card" id="methForm" novalidate>
@@ -827,9 +907,9 @@ section{position:relative;padding:120px 0;background:var(--bg);color:var(--text)
     </div>
     <ol class="sgrid" style="margin-top:56px">
       <li class="sc reveal"><span class="sico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></span><span class="sn">Step 01</span><h3>Find</h3><p>Search the archive by series, category or date range.</p></li>
-      <li class="sc reveal d1"><span class="sico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 12l3 3 5-6"/></svg></span><span class="sn">Step 02</span><h3>Validate</h3><p>Review coverage dates, frequency and documented breaks against the methodology notes.</p></li>
+      <li class="sc reveal d1"><span class="sico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 12l3 3 5-6"/></svg></span><span class="sn">Step 02</span><h3>Validate</h3><p>Check coverage and breaks against the methodology note.</p></li>
       <li class="sc reveal d2"><span class="sico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M4 19h16"/></svg></span><span class="sn">Step 03</span><h3>Ingest</h3><p>Load the table into Python, R or your AI pipeline.</p></li>
-      <li class="sc reveal d3"><span class="sico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17h3l2-4V7H6v6h3zM14 17h3l2-4V7h-6v6h3z"/></svg></span><span class="sn">Step 04</span><h3>Cite</h3><p>Record the series reference and cite the supporting source documentation.</p></li>
+      <li class="sc reveal d3"><span class="sico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17h3l2-4V7H6v6h3zM14 17h3l2-4V7h-6v6h3z"/></svg></span><span class="sn">Step 04</span><h3>Cite</h3><p>Reference the permanent link and the series identifier.</p></li>
     </ol>
   </div>
 </section>
