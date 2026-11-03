@@ -1092,6 +1092,44 @@ section{position:relative;padding:120px 0;background:var(--bg);color:var(--text)
 .hero-bg .hero-video{filter:url(#heroVivid) contrast(1.06) brightness(1.04)!important}
 </style>
 
+
+<style id="email-capture-width-refinement-20261103">
+/* Give the email field enough room to show its complete placeholder on desktop. */
+#cta .pill-form {
+  width: min(100%, 700px) !important;
+  max-width: 700px !important;
+  box-sizing: border-box !important;
+}
+#cta .pill-form input {
+  flex: 1 1 auto !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  white-space: nowrap !important;
+}
+@media (max-width: 600px) {
+  #cta .pill-form {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 8px !important;
+    padding: 10px !important;
+    border-radius: 18px !important;
+  }
+  #cta .pill-form input {
+    min-height: 44px !important;
+    padding: 10px 8px !important;
+    box-sizing: border-box !important;
+  }
+  #cta .pill-form .btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><filter id="heroVivid" color-interpolation-filters="sRGB"><feConvolveMatrix order="3" kernelMatrix="0 -0.2 0 -0.2 1.8 -0.2 0 -0.2 0" divisor="1" preserveAlpha="true"/><feColorMatrix type="saturate" values="1.7"/></filter></defs></svg>
@@ -1353,7 +1391,7 @@ section{position:relative;padding:120px 0;background:var(--bg);color:var(--text)
       <div class="c-5-8 fitem"><h3>Data that flows</h3><div class="sub">Built for your existing pipeline</div><p>Structured datasets support analysis workflows in Python, R and other quantitative tools.</p></div>
       <div class="c-9-12 fitem"><h3>Built for analysts</h3><div class="sub">Software your team will want to use</div><p>A responsive website experience designed for consistent access across desktop, tablet and mobile.</p></div>
       <div class="c-1-4 fitem"><h3>Citation-ready</h3><div class="sub">Transparent by default</div><p>Source and methodology details help researchers prepare references for papers and institutional reports.</p></div>
-      <div class="c-5-8 fitem"><h3>Secure content management</h3><div class="sub">Role-based publishing with MFA</div><p>A role-based WordPress CMS supports controlled publishing by administrators, managers and content contributors, with multi-factor authentication.</p></div>
+      <div class="c-5-8 fitem"><h3>Secure content management</h3><div class="sub">Role-based publishing with MFA</div><p>A role-based WordPress CMS is planned to support controlled publishing by administrators, managers and content contributors, with multi-factor authentication.</p></div>
       <div class="c-9-12 fitem"><h3>Stability you can document</h3><div class="sub">A fiduciary-minded provider</div><p>Historical data continuity is supported by clear company, vendor and licensing information for institutional review.</p></div>
     </div>
   </div>

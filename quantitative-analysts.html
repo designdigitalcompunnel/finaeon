@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Quantitative Analysts | Finaeon</title>
-<meta name="description" content="Model-ready historical financial data for quantitative analysts. Structured datasets from 1601 for Python, R and AI pipelines, with permanent links and citable methodology.">
+<meta name="description" content="Historical financial data for quantitative analysts, with model-ready datasets for Python, R and AI workflows, source documentation and methodology context.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 620 474'%3E%3Cpath fill='%2342BCAE' d='M0 0H194C251.438 0 298 46.5624 298 104V225H104C46.5624 225 0 178.438 0 121V0Z'/%3E%3Cpath fill='%2342BCAE' d='M620 0H426C368.562 0 322 46.5624 322 104V225H516C573.438 225 620 178.438 620 121V0Z'/%3E%3Cpath fill='%2342BCAE' d='M0 474H194C251.438 474 298 427.438 298 370V249H104C46.5624 249 0 295.562 0 353V474Z'/%3E%3Cpath fill='%2342BCAE' d='M620 474H426C368.562 474 322 427.438 322 370V249H516C573.438 249 620 295.562 620 353V474Z'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -706,6 +706,10 @@ section{position:relative;padding:120px 0;background:var(--bg);color:var(--text)
 .gate-ico .gate-back rect,.gate-ico .gate-front path:first-child,.gate-ico .gate-front path:nth-child(2){stroke:#00554C;stroke-width:6;stroke-linejoin:round}
 .gate-ico .gate-back{animation:gateRock 7s ease-in-out infinite}
 .gate-ico .gate-pen{animation:gatePen 4.8s ease-in-out infinite}
+
+/* Quantitative Analysts page: subtle financial-data visual in the Book a Demo section only. */
+#cta{position:relative;isolation:isolate;overflow:hidden;background:#062B3A url("https://images.unsplash.com/photo-1768055104895-e6185762f2a9?auto=format&fit=crop&w=2200&q=85") center/cover no-repeat!important}
+#cta::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(105deg,rgba(4,25,43,.91) 0%,rgba(4,47,58,.84) 52%,rgba(4,25,43,.90) 100%)}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
@@ -813,8 +817,8 @@ section{position:relative;padding:120px 0;background:var(--bg);color:var(--text)
       <span class="q">Consistent across the archive</span>
     </article></div>
     <div class="c-9-12 reveal d2"><article class="card">
-      <h3>Permanent links</h3>
-      <p>Every downloadable series has a permanent link, so pipelines and papers point to the same source.</p>
+      <h3>Traceable resources</h3>
+      <p>Stable series identifiers and clear source documentation help keep analysis workflows and research citations connected to the underlying record.</p>
       <span class="q">Reproducible by design</span>
     </article></div>
   </div>
@@ -827,7 +831,7 @@ section{position:relative;padding:120px 0;background:var(--bg);color:var(--text)
       <div class="c-1-12">
         <span class="label reveal">Sample layout</span>
         <h2 id="layoutTitle" class="reveal">One series, in the shape your pipeline expects.</h2>
-        <p class="lead reveal d1">Each series arrives as a flat table: one row per observation, typed columns and a stable identifier. The layout below is illustrative.</p>
+        <p class="lead reveal d1">Explore how structured, model-ready historical datasets can support quantitative workflows. Available fields and formats vary by series; consult the accompanying documentation for details. The layout below is illustrative.</p>
       </div>
     </div>
     <div class="grid dpair" style="margin-top:52px">
@@ -879,7 +883,7 @@ section{position:relative;padding:120px 0;background:var(--bg);color:var(--text)
       <div class="gate-ico reveal" aria-hidden="true"><svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg"><g class="gate-back"><rect x="112" y="30" width="96" height="132" rx="4" transform="rotate(14 160 96)" fill="#ECEBDF"/><rect x="140" y="92" width="80" height="120" rx="4" transform="rotate(14 160 96)" fill="#ECEBDF"/></g><g class="gate-front"><path d="M40 70 H150 V170 L124 214 H40 Z" fill="#ECEBDF"/><path d="M124 214 V188 Q124 180 132 180 H150"/><path class="gate-line l1" pathLength="1" d="M62 108 H128"/><path class="gate-line l2" pathLength="1" d="M62 130 H128"/><path class="gate-line l3" pathLength="1" d="M62 152 H108"/></g><g class="gate-pen"><path d="M30 34 L108 150" stroke-width="12"/><path d="M108 150 L116 164" stroke-width="8"/></g></svg></div>
     <span class="label reveal">Gated download</span>
       <h2 id="methTitle" class="reveal">Methodology note for model documentation.</h2>
-      <p class="lead reveal d1">Explains how series are chain-linked across eras, how breaks are handled and what to disclose when you cite the data. Share your work email to receive it.</p>
+      <p class="lead reveal d1">Learn how Finaeon documents chain-linked historical series, source context and methodology to support evaluation, reproducibility and citation. Share your work email to request the note.</p>
     </div>
     <div class="c-7-12 reveal d1">
       <form class="form-card" id="methForm" novalidate>
@@ -907,9 +911,9 @@ section{position:relative;padding:120px 0;background:var(--bg);color:var(--text)
     </div>
     <ol class="sgrid" style="margin-top:56px">
       <li class="sc reveal"><span class="sico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></span><span class="sn">Step 01</span><h3>Find</h3><p>Search the archive by series, category or date range.</p></li>
-      <li class="sc reveal d1"><span class="sico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 12l3 3 5-6"/></svg></span><span class="sn">Step 02</span><h3>Validate</h3><p>Check coverage and breaks against the methodology note.</p></li>
-      <li class="sc reveal d2"><span class="sico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M4 19h16"/></svg></span><span class="sn">Step 03</span><h3>Ingest</h3><p>Load the table into Python, R or your AI pipeline.</p></li>
-      <li class="sc reveal d3"><span class="sico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17h3l2-4V7H6v6h3zM14 17h3l2-4V7h-6v6h3z"/></svg></span><span class="sn">Step 04</span><h3>Cite</h3><p>Reference the permanent link and the series identifier.</p></li>
+      <li class="sc reveal d1"><span class="sico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 12l3 3 5-6"/></svg></span><span class="sn">Step 02</span><h3>Validate</h3><p>Review the available coverage details and source methodology for the selected series.</p></li>
+      <li class="sc reveal d2"><span class="sico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M4 19h16"/></svg></span><span class="sn">Step 03</span><h3>Ingest</h3><p>Bring structured, model-ready historical data into Python, R or your AI workflow.</p></li>
+      <li class="sc reveal d3"><span class="sico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17h3l2-4V7H6v6h3zM14 17h3l2-4V7h-6v6h3z"/></svg></span><span class="sn">Step 04</span><h3>Cite</h3><p>Reference the series identifier and the available source and methodology documentation.</p></li>
     </ol>
   </div>
 </section>
@@ -920,7 +924,7 @@ section{position:relative;padding:120px 0;background:var(--bg);color:var(--text)
     <div class="c-1-8">
       <span class="label reveal">Book a demo</span>
       <h2 id="ctaTitle" class="reveal">See the data in your own pipeline.</h2>
-      <p class="lead reveal d1">Tell us about your models and we will show you the series and formats that fit. A member of our team replies within one business day.</p>
+      <p class="lead reveal d1">Tell us about your models and research requirements. Our team can help you explore relevant historical series, available formats and supporting methodology.</p>
       <form class="pill-form reveal d2" id="ctaForm" aria-label="Book a demo">
         <label class="sr-only" for="ctaEmail">Work email address</label>
         <input id="ctaEmail" type="email" placeholder="Enter your work email address" autocomplete="email" required>
@@ -1082,7 +1086,7 @@ section{position:relative;padding:120px 0;background:var(--bg);color:var(--text)
     e.preventDefault();
     var v = document.getElementById('ctaEmail'), s = document.getElementById('ctaStatus');
     if(!v.checkValidity()){ s.textContent = 'Please enter a valid work email address.'; v.focus(); return; }
-    s.textContent = 'Thank you. A member of our team will be in touch within one business day.';
+    s.textContent = 'Thank you. Your demo request has been received.';
     v.value = '';
   });
   document.getElementById('methForm').addEventListener('submit', function(e){
@@ -1103,5 +1107,43 @@ section{position:relative;padding:120px 0;background:var(--bg);color:var(--text)
   document.querySelector('.a11y').addEventListener('click', function(e){ e.preventDefault(); });
 })();
 </script>
+
+<style id="email-capture-width-refinement-20261103">
+/* Wider email capture bars so the complete work-email placeholder remains visible. */
+#cta .pill-form {
+  width: min(100%, 700px) !important;
+  max-width: 700px !important;
+  box-sizing: border-box !important;
+}
+#cta .pill-form input {
+  flex: 1 1 auto !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  white-space: nowrap !important;
+}
+@media (max-width: 600px) {
+  #cta .pill-form {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 8px !important;
+    padding: 10px !important;
+    border-radius: 18px !important;
+  }
+  #cta .pill-form input {
+    min-height: 44px !important;
+    padding: 10px 8px !important;
+    box-sizing: border-box !important;
+  }
+  #cta .pill-form .btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+</style>
+
 </body>
 </html>
